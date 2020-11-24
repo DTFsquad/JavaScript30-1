@@ -65,14 +65,14 @@
       transform-origin: 100%;
       transform: rotate(90deg);
       transition: all 0.05s;
-      transition-timing-function: ubic-bezier(0.1, 2.7, 0.58, 1);
+      transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
     }
   </style>
 
   <script>
     const secondHand = document.querySelector('.second-hand');
-    const minsHand = document.querySelector('min-hand');
-    const hourHand = document.querySelector('hour-hand');
+    const minsHand = document.querySelector('.min-hand');
+    const hourHand = document.querySelector('.hour-hand');
 
     function setDate() {
       const now = new Date();
@@ -91,7 +91,7 @@
     }
 
     setInterval(setDate, 1000);
-    
+
     setDate();
   </script>
 </body>
